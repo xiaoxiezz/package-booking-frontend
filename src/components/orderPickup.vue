@@ -1,5 +1,7 @@
 <template>
-  <div class="orderPickup">
+   <a-row>
+    <a-col :span="6"></a-col>
+    <a-col :span="12">
     <a-form :form="form" @submit="handleSubmit">
       <a-form-item label="运单号" :label-col="{ span: 5 }" :wrapper-col="{ span: 12 }">
         <a-input
@@ -22,7 +24,8 @@
       <a-button type="primary" html-type="submit">预约</a-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a-button type="primary" html-type="reset">取消</a-button>
     </a-form>
-  </div>
+    </a-col>
+   </a-row>
 </template>
 
 <script>
