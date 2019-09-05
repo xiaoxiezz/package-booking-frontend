@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import putInStorehouse from './components/putInStorehouse.vue'
+import orderPickup from './components/orderPickup.vue'
+import list from './components/list.vue'
 
 Vue.use(Router)
 
@@ -14,12 +17,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/putInStorehouse',
+      name: 'putInStorehouse',
+      component: putInStorehouse
+    },
+    {
+      path: '/orderPickup',
+      name: 'orderPickup',
+      component: orderPickup
+    },
+    {
+      path: '/list',
+      name: 'list',
+      component: list
     }
   ]
 })
