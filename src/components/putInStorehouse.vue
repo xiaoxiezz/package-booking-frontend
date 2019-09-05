@@ -61,14 +61,18 @@ export default {
   },
   methods: {
     handleSubmit(e) {
-      e.preventDefault();
+      handleSubmit (e) {
+      e.preventDefault()
       this.form.validateFields((err, values) => {
         if (!err) {
-          console.log("Received values of form: ", values);
+          axios.post('http://localhost:8080/orderTable', values)
+            .then(function (response) {
+              console.log(response)
+            })
         }
-      });
+      })
     }
-  }
+
 };
 </script>
 

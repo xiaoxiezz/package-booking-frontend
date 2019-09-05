@@ -1,18 +1,19 @@
 <template>
-  <div class="list">
-    <a-button html-type="submit">all</a-button>&nbsp;&nbsp;
-    <a-button html-type="submit">已预约</a-button>&nbsp;&nbsp;
-    <a-button html-type="submit">已取件</a-button>&nbsp;&nbsp;
-    <a-button html-type="submit">未预约</a-button>&nbsp;&nbsp;
-    <a-button shape="circle" style="height:80px;width:80px;" html-type="submit">+添加</a-button>
-    <a-table :columns="columns" :dataSource="data" bordered>
-      <template slot="name" slot-scope="text">
-        <a href="javascript:;">{{text}}</a>
-      </template>
-      <template slot="title" slot-scope="currentPageData">Header</template>
-      <template slot="footer" slot-scope="currentPageData">Footer</template>
-    </a-table>
-  </div>
+  <a-row>
+    <a-col :span="6"></a-col>
+    <a-col :span="12">
+      <a-button html-type="submit">all</a-button>&nbsp;&nbsp;
+      <a-button html-type="submit">已预约</a-button>&nbsp;&nbsp;
+      <a-button html-type="submit">已取件</a-button>&nbsp;&nbsp;
+      <a-button html-type="submit">未预约</a-button>&nbsp;&nbsp;
+      <a-button shape="circle" style="height:80px;width:80px;" html-type="submit">+添加</a-button>
+      <a-table :columns="columns" :dataSource="data" bordered>
+        <template slot="name" slot-scope="text">
+          <a href="javascript:;">{{text}}</a>
+        </template>
+      </a-table>
+    </a-col>
+  </a-row>
 </template>
 
 <script>
